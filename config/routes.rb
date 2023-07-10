@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'greetings#index'
+  match '/greeting', to: 'greetings#index', via: :get
   match '/random', to: 'greetings#random', via: :get
 end
